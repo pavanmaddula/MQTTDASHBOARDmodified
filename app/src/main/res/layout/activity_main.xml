@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <io.netopen.hotbitmapgg.library.view.RingProgressBar
+        android:layout_height="300dp"
+        android:layout_width="300dp"
+        android:layout_centerVertical="true"
+        app:ringColor="@color/colorPrimaryDark"
+        app:ringProgressColor="@color/colorAccent"
+        app:textColor="#5dbab0"
+        app:textSize="20sp"
+        app:max="100"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ringprogress"
+        app:textIsShow="true"
+        app:style="FILL"
+        />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="enter the number here"
+        android:layout_below="@id/ringprogress"
+        android:id="@+id/text"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_centerHorizontal="true"
+        android:text="INSERT"
+        android:id="@+id/buttonpanel"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ringprogress"
+        android:text="message displayed here"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text2"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PUBLISH"
+        android:onClick="pub"/>
+
+</RelativeLayout>
