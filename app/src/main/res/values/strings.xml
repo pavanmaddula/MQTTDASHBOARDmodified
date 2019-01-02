@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">MQTTAPP</string>
+    <string name="app_name">WATER STATUS</string>
+    <string name="tank5">TANK5</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="tank4">TANK4</string>
+    <string name="tank3">TANK3</string>
+
+
+
 </resources>
