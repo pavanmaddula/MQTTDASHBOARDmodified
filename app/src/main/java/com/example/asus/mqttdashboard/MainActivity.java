@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView image;
     TextView textview;
     static String topicstr = "hehe";
-    static String topicstr1 = "wT-App4";//subscribe
-    static String topicstr2 = "wT-App2";//publish
+    static String topicstr1 = "wT-Bh";//subscribe
+    static String topicstr2 = "wT-BhC";//publish
     String message;
     String status;
 
@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
         options = new MqttConnectOptions();
             try {
                 IMqttToken token = client.connect(options);
+                options.setMqttVersion(MqttConnectOptions.MQTT_VERSION_3_1);
+                options.setCleanSession(true);
+                options.setKeepAliveInterval(15000);
                 token.setActionCallback(new IMqttActionListener() {
                     @Override
                     public void onSuccess(IMqttToken asyncActionToken) {
